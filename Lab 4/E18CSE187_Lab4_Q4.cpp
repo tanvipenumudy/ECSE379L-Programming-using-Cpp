@@ -53,13 +53,25 @@ int main(){
             cin>>arr[i][j];
         }
     }
-
-    cout<<"Lower Triangular Matrix Traversal: "<<endl;
-    int* A = lowerTriangularMatrix(arr, n);
-    int* B = upperTriangularMatrix(arr, n);
-    print(A, (n*(n+1))/2);
-    cout<<endl<<"Upper Triangular Matrix Traversal: "<<endl;
-    print(B, (n*(n+1))/2);
+    
+    cout<<"1. Lower Triangular Matrix Traversal"<<endl<<"2. Upper Triangular Matrix Traversal"<<endl;
+    cout<<"Choice of Solution: ";
+    int choice;
+    cin>>choice;
+    
+    if(choice==1){
+        cout<<"Lower Triangular Matrix Traversal: "<<endl;
+        int* A = lowerTriangularMatrix(arr, n);
+        print(A, (n*(n+1))/2);
+    }
+    else if(choice==2){
+        cout<<endl<<"Upper Triangular Matrix Traversal: "<<endl;
+        int* B = upperTriangularMatrix(arr, n);
+        print(B, (n*(n+1))/2);
+    }
+    else{
+        cout<<"Enter Valid Key!";
+    }
 
     return 0;
 }

@@ -53,7 +53,7 @@ int main(){
         }
 
         else{
-            cout<<"Enter a Valid Key!"<<endl;
+            cout<<"Enter Valid Key!"<<endl;
         }
     }
 
