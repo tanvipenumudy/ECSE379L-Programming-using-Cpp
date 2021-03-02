@@ -54,5 +54,5 @@ int main(){
     }
     arr.pop_back();
     Q1(arr);
-	return 0;
+    return 0;
 }
