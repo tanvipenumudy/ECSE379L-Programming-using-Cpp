@@ -15,7 +15,7 @@ int Q2(int arr[], int n){
         pos[i].first = arr[i];
         pos[i].second = i;
     }
-    sort(pos, pos + n);
+    sort(pos, pos+n);
     vector<bool> v(n, false);
     int ans = 0;
     for(int i=0; i<n; i++){
