@@ -5,20 +5,9 @@
  *      Author: Tanvi Penumudy (E18CSE187)
  */
 
-#include <bits/stdc++.h>
 #include <iostream>
+#include <cstring>
 using namespace std;
-
-int Q1(char *arr, int n){
-    int *ptr = &arr[0];
-    char *key = "Amitabh";
-    for(int i=0; i<n; i++){
-        if(*ptr==*key){
-            return i+1;
-        }
-    }
-    return -1;
-}
 
 int main(){
     int n;
@@ -29,17 +18,19 @@ int main(){
         cin>>str;
         arr[i]=str;
     }
-    cout<<Q1(arr, n);
-    return 0;
-}
-
-int Q1(char *arr, int n){
-    char *ptr = arr[0];
-    const char *key = "Amitabh";
+    int pos=-1;
+    char **ptr = &arr[0];
     for(int i=0; i<n; i++){
-        if(*ptr==*key){
-            return i+1;
+        if(strcmp(*ptr,"Amitabh")==0){
+            pos=i+1;
         }
+        ptr++;
     }
-    return -1;
+    if(pos==-1){
+        cout<<"Not present";
+    }
+    else{
+        cout<<"Present at number "<<pos;
+    }
+    return 0;
 }
